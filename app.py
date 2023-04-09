@@ -1,5 +1,19 @@
 import math
 
+file1 = 'data/drivers.txt'
+file2 = 'data/address.txt'
+
+def read_files():
+    try:
+      with open(file1, 'r') as drivers, open(file2, 'r') as address:
+          # Read all lines from both files into a list
+          driver_list = drivers.readlines()  
+          address_list = address.readlines()
+
+          return (driver_list, address_list)
+    except Exception as e:
+        print(f"There was a error reading files::: {e}")
+        return ()
 
 # Calculate base suitability score
 def get_base_ss(length, name):
@@ -45,10 +59,7 @@ def assign_shipments(shipments, drivers):
     return (driver_shipments, scores)
 
 
-# Example usage
-shipments = ['123 Main St', '456 Elm St', '789 Oak St', '543 Palo Alto California']
-drivers = ['Alice', 'Bob', 'Charlie', "Roman", "Claudio"]
-
+drivers, shipments = read_files()
 driver_shipments, scores = assign_shipments(shipments, drivers)
 
 for driver in driver_shipments:
