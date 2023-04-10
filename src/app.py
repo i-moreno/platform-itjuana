@@ -12,4 +12,4 @@ driver_shipments, scores = utils.assign_shipments(shipments, drivers)
 # Return formated output
 for driver in driver_shipments:
     print(
-        f"{driver} is delivering to {driver_shipments[driver]}. Score = {scores[driver]}")
+        f"{driver} is delivering to {driver_shipments[driver]} with a score of {scores[driver]}")
