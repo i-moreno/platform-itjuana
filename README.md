@@ -22,4 +22,4 @@ In this case the application comes with two demo files so you can test it once y
 - The order matters, the first path should be to the drivers file the second one should be to the shipments file.
 - The program only supports `txt` files.
 - The name of the files doesn't matter.
-- In some cases you might not have binded python 3 to your terminal and that can lead to issues, in that case you could either create an alias for python 3 or just try te application with python 3 interpreter directly: python3 src/app drivers.txt shipments.txt
+- In some cases you might not have binded python 3 to your terminal and that can lead to issues, in that case you could either create an alias for python 3 or just try te application with python 3 interpreter directly: `python3 src/app drivers.txt shipments.txt`
